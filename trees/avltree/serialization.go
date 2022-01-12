@@ -6,8 +6,8 @@ package avltree
 
 import (
 	"encoding/json"
-	"github.com/emirpasic/gods/containers"
-	"github.com/emirpasic/gods/utils"
+	"github.com/dairongpeng/gods/containers"
+	"github.com/dairongpeng/gods/utils"
 )
 
 func assertSerializationImplementation() {

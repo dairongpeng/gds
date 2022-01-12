@@ -6,7 +6,7 @@ package hashset
 
 import (
 	"encoding/json"
-	"github.com/emirpasic/gods/containers"
+	"github.com/dairongpeng/gods/containers"
 )
 
 func assertSerializationImplementation() {
