@@ -15,11 +15,13 @@ func assertSerializationImplementation() {
 }
 
 // ToJSON outputs the JSON representation of list's elements.
+// ToJSON 返回list通过json序列化后的字节流数组
 func (list *List) ToJSON() ([]byte, error) {
 	return json.Marshal(list.elements[:list.size])
 }
 
 // FromJSON populates list's elements from the input JSON representation.
+// FromJSON 通过传入的二进制流数组，重新反序列化为列表list结构
 func (list *List) FromJSON(data []byte) error {
 	err := json.Unmarshal(data, &list.elements)
 	if err == nil {
