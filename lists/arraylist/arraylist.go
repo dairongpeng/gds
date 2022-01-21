@@ -17,6 +17,7 @@ import (
 	"github.com/dairongpeng/gods/utils"
 )
 
+// 无需显示调用，主要是提供给编译器做检查。用来保证当前List结构实现了lists.List接口
 func assertListImplementation() {
 	var _ lists.List = (*List)(nil)
 }
