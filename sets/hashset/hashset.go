@@ -11,7 +11,7 @@ package hashset
 
 import (
 	"fmt"
-	"github.com/dairongpeng/gods/sets"
+	"github.com/dairongpeng/gds/sets"
 	"strings"
 )
 

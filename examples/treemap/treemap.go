@@ -4,7 +4,7 @@
 
 package main
 
-import "github.com/dairongpeng/gods/maps/treemap"
+import "github.com/dairongpeng/gds/maps/treemap"
 
 // TreeMapExample to demonstrate basic usage of TreeMap
 func main() {

@@ -13,9 +13,9 @@ package treemap
 
 import (
 	"fmt"
-	"github.com/dairongpeng/gods/maps"
-	rbt "github.com/dairongpeng/gods/trees/redblacktree"
-	"github.com/dairongpeng/gods/utils"
+	"github.com/dairongpeng/gds/maps"
+	rbt "github.com/dairongpeng/gds/trees/redblacktree"
+	"github.com/dairongpeng/gds/utils"
 	"strings"
 )
 

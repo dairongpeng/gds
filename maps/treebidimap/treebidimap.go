@@ -19,9 +19,9 @@ package treebidimap
 
 import (
 	"fmt"
-	"github.com/dairongpeng/gods/maps"
-	"github.com/dairongpeng/gods/trees/redblacktree"
-	"github.com/dairongpeng/gods/utils"
+	"github.com/dairongpeng/gds/maps"
+	"github.com/dairongpeng/gds/trees/redblacktree"
+	"github.com/dairongpeng/gds/utils"
 	"strings"
 )
 

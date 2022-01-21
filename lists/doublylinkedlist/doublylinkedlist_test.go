@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/dairongpeng/gods/utils"
+	"github.com/dairongpeng/gds/utils"
 )
 
 func TestListNew(t *testing.T) {

@@ -4,7 +4,7 @@
 
 package main
 
-import "github.com/dairongpeng/gods/sets/hashset"
+import "github.com/dairongpeng/gds/sets/hashset"
 
 // HashSetExample to demonstrate basic usage of HashSet
 func main() {

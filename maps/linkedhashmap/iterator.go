@@ -5,8 +5,8 @@
 package linkedhashmap
 
 import (
-	"github.com/dairongpeng/gods/containers"
-	"github.com/dairongpeng/gods/lists/doublylinkedlist"
+	"github.com/dairongpeng/gds/containers"
+	"github.com/dairongpeng/gds/lists/doublylinkedlist"
 )
 
 func assertIteratorImplementation() {

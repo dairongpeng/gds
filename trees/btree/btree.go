@@ -19,8 +19,8 @@ package btree
 import (
 	"bytes"
 	"fmt"
-	"github.com/dairongpeng/gods/trees"
-	"github.com/dairongpeng/gods/utils"
+	"github.com/dairongpeng/gds/trees"
+	"github.com/dairongpeng/gds/utils"
 	"strings"
 )
 

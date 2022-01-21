@@ -13,9 +13,9 @@ package binaryheap
 
 import (
 	"fmt"
-	"github.com/dairongpeng/gods/lists/arraylist"
-	"github.com/dairongpeng/gods/trees"
-	"github.com/dairongpeng/gods/utils"
+	"github.com/dairongpeng/gds/lists/arraylist"
+	"github.com/dairongpeng/gds/trees"
+	"github.com/dairongpeng/gds/utils"
 	"strings"
 )
 

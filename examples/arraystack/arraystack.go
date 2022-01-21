@@ -4,7 +4,7 @@
 
 package main
 
-import "github.com/dairongpeng/gods/stacks/arraystack"
+import "github.com/dairongpeng/gds/stacks/arraystack"
 
 // ArrayStackExample to demonstrate basic usage of ArrayStack
 func main() {

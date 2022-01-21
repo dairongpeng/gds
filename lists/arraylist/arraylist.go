@@ -13,8 +13,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/dairongpeng/gods/lists"
-	"github.com/dairongpeng/gods/utils"
+	"github.com/dairongpeng/gds/lists"
+	"github.com/dairongpeng/gds/utils"
 )
 
 // 无需显示调用，主要是提供给编译器做检查。用来保证当前List结构实现了lists.List接口
