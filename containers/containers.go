@@ -16,6 +16,7 @@ package containers
 import "github.com/dairongpeng/gds/utils"
 
 // Container is base interface that all data structures implement.
+// Container 容器接口是所数据结构的基础接口
 type Container interface {
 	Empty() bool
 	Size() int
@@ -25,6 +26,7 @@ type Container interface {
 
 // GetSortedValues returns sorted container's elements with respect to the passed comparator.
 // Does not effect the ordering of elements within the container.
+// GetSortedValues 有序输出容器中的元素
 func GetSortedValues(container Container, comparator utils.Comparator) []interface{} {
 	values := container.Values()
 	if len(values) < 2 {

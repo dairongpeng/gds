@@ -21,6 +21,7 @@ func assertMapImplementation() {
 }
 
 // Map holds the elements in go's native map
+// Map hashMap基于Go原生map结构实现
 type Map struct {
 	m map[interface{}]interface{}
 }

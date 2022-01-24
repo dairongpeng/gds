@@ -5,6 +5,7 @@
 package containers
 
 // IteratorWithIndex is stateful iterator for ordered containers whose values can be fetched by an index.
+// IteratorWithIndex 基于下标的迭代器接口
 type IteratorWithIndex interface {
 	// Next moves the iterator to the next element and returns true if there was a next element in the container.
 	// If Next() returns true, then next element's index and value can be retrieved by Index() and Value().
@@ -31,6 +32,7 @@ type IteratorWithIndex interface {
 }
 
 // IteratorWithKey is a stateful iterator for ordered containers whose elements are key value pairs.
+// IteratorWithKey 基于key的迭代器接口
 type IteratorWithKey interface {
 	// Next moves the iterator to the next element and returns true if there was a next element in the container.
 	// If Next() returns true, then next element's key and value can be retrieved by Key() and Value().

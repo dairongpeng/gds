@@ -5,6 +5,7 @@
 package containers
 
 // EnumerableWithIndex provides functions for ordered containers whose values can be fetched by an index.
+// EnumerableWithIndex 为有序的容器提供了函数，这些容器的值可以通过一个索引来遍历获取。
 type EnumerableWithIndex interface {
 	// Each calls the given function once for each element, passing that element's index and value.
 	Each(func(index int, value interface{}))
@@ -33,6 +34,7 @@ type EnumerableWithIndex interface {
 }
 
 // EnumerableWithKey provides functions for ordered containers whose values whose elements are key/value pairs.
+// EnumerableWithKey 为有序的容器提供了函数，其值的元素是通过键/值对遍历获取。
 type EnumerableWithKey interface {
 	// Each calls the given function once for each element, passing that element's key and value.
 	Each(func(key interface{}, value interface{}))
