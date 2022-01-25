@@ -20,6 +20,7 @@ func assertTreeImplementation() {
 }
 
 // Tree holds elements of the AVL tree.
+// Tree AVL树的结构，含有一个根节点指针，一个比较器，及树的节点数量
 type Tree struct {
 	Root       *Node            // Root node
 	Comparator utils.Comparator // Key comparator
@@ -27,6 +28,7 @@ type Tree struct {
 }
 
 // Node is a single element within the tree
+// Node AVL树的节点结构，二叉树的节点，节点含有key-value,及指向父亲节点的指针，两个孩子指针,及以自身为头节点的平衡因子
 type Node struct {
 	Key      interface{}
 	Value    interface{}
@@ -36,22 +38,26 @@ type Node struct {
 }
 
 // NewWith instantiates an AVL tree with the custom comparator.
+// NewWith 实例化一颗AVL树，传入指定的比较器
 func NewWith(comparator utils.Comparator) *Tree {
 	return &Tree{Comparator: comparator}
 }
 
 // NewWithIntComparator instantiates an AVL tree with the IntComparator, i.e. keys are of type int.
+// NewWithIntComparator 实例化一颗AVL树，基于int比较器
 func NewWithIntComparator() *Tree {
 	return &Tree{Comparator: utils.IntComparator}
 }
 
 // NewWithStringComparator instantiates an AVL tree with the StringComparator, i.e. keys are of type string.
+// NewWithStringComparator 实例化一颗AVL树，基于String比较器
 func NewWithStringComparator() *Tree {
 	return &Tree{Comparator: utils.StringComparator}
 }
 
 // Put inserts node into the tree.
 // Key should adhere to the comparator's type assertion, otherwise method panics.
+// Put会把一组k-v Put到AVL树中，k需要是该AVL树的比较器能够比较的类型
 func (t *Tree) Put(key interface{}, value interface{}) {
 	t.put(key, value, nil, &t.Root)
 }

@@ -21,6 +21,7 @@ func assertStackImplementation() {
 }
 
 // Stack holds elements in an array-list
+// Stack 基于数组切片实现的list，实现栈。底层是数组切片
 type Stack struct {
 	list *arraylist.List
 }

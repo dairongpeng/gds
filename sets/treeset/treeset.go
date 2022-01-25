@@ -22,6 +22,7 @@ func assertSetImplementation() {
 }
 
 // Set holds elements in a red-black tree
+// Set TreeSet基于红黑树实现
 type Set struct {
 	tree *rbt.Tree
 }

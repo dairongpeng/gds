@@ -20,6 +20,7 @@ func assertSetImplementation() {
 }
 
 // Set holds elements in go's native map
+// Set 基于原生的map构建HashSet
 type Set struct {
 	items map[interface{}]struct{}
 }
@@ -27,6 +28,7 @@ type Set struct {
 var itemExists = struct{}{}
 
 // New instantiates a new empty set and adds the passed values, if any, to the set
+// New 实例化一个HashSet结构
 func New(values ...interface{}) *Set {
 	set := &Set{items: make(map[interface{}]struct{})}
 	if len(values) > 0 {
@@ -36,6 +38,7 @@ func New(values ...interface{}) *Set {
 }
 
 // Add adds the items (one or more) to the set.
+// Add 添加一个或者多个元素到HashSet结构中
 func (set *Set) Add(items ...interface{}) {
 	for _, item := range items {
 		set.items[item] = itemExists
@@ -43,6 +46,7 @@ func (set *Set) Add(items ...interface{}) {
 }
 
 // Remove removes the items (one or more) from the set.
+// Remove 移除一个或者多个元素
 func (set *Set) Remove(items ...interface{}) {
 	for _, item := range items {
 		delete(set.items, item)
@@ -52,6 +56,7 @@ func (set *Set) Remove(items ...interface{}) {
 // Contains check if items (one or more) are present in the set.
 // All items have to be present in the set for the method to return true.
 // Returns true if no arguments are passed at all, i.e. set is always superset of empty set.
+// Contains 检查HashSet中是否完全包含传入的一个或者多个元素
 func (set *Set) Contains(items ...interface{}) bool {
 	for _, item := range items {
 		if _, contains := set.items[item]; !contains {

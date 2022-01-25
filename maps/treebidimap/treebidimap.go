@@ -30,6 +30,7 @@ func assertMapImplementation() {
 }
 
 // Map holds the elements in two red-black trees.
+// Map 双向的有序表，基于两颗红黑树，一个基于key的比较器，一个基于value的比较器实现
 type Map struct {
 	forwardMap      redblacktree.Tree
 	inverseMap      redblacktree.Tree
@@ -43,6 +44,7 @@ type data struct {
 }
 
 // NewWith instantiates a bidirectional map.
+// NewWith 实例化一个key和value同时有序的有序表biditreemap, 指定key和value的比较器
 func NewWith(keyComparator utils.Comparator, valueComparator utils.Comparator) *Map {
 	return &Map{
 		forwardMap:      *redblacktree.NewWith(keyComparator),
@@ -53,11 +55,13 @@ func NewWith(keyComparator utils.Comparator, valueComparator utils.Comparator) *
 }
 
 // NewWithIntComparators instantiates a bidirectional map with the IntComparator for key and value, i.e. keys and values are of type int.
+// NewWithIntComparators 实例化一个key和value都为int的双向有序表
 func NewWithIntComparators() *Map {
 	return NewWith(utils.IntComparator, utils.IntComparator)
 }
 
 // NewWithStringComparators instantiates a bidirectional map with the StringComparator for key and value, i.e. keys and values are of type string.
+// NewWithStringComparators 实例化一个key和value都为string的双向有序表
 func NewWithStringComparators() *Map {
 	return NewWith(utils.StringComparator, utils.StringComparator)
 }

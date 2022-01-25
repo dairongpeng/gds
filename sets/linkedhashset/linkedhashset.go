@@ -25,6 +25,7 @@ func assertSetImplementation() {
 }
 
 // Set holds elements in go's native map
+// Set 顺序的HashSet结构，基于一个HashMap和一个doublylinkedlist实现
 type Set struct {
 	table    map[interface{}]struct{}
 	ordering *doublylinkedlist.List

@@ -21,6 +21,7 @@ func assertStackImplementation() {
 }
 
 // Stack holds elements in a singly-linked-list
+// Stack 基于双向链表实现栈结构
 type Stack struct {
 	list *singlylinkedlist.List
 }
