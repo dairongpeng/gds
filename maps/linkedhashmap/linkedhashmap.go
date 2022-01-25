@@ -23,6 +23,7 @@ func assertMapImplementation() {
 }
 
 // Map holds the elements in a regular hash table, and uses doubly-linked list to store key ordering.
+// Map 持有一个hash表和一个双向链表，加入的key可以根据双向链表，确定加入的顺序
 type Map struct {
 	table    map[interface{}]interface{}
 	ordering *doublylinkedlist.List
@@ -38,6 +39,8 @@ func New() *Map {
 
 // Put inserts key-value pair into the map.
 // Key should adhere to the comparator's type assertion, otherwise method panics.
+// Put 将一组k-v插入到map中，且追加到ordering的双向链表的尾部， Key应该是可比较的类型。
+// 因为map实现了containers接口，GetSortedValues方法会有序输出containers
 func (m *Map) Put(key interface{}, value interface{}) {
 	if _, contains := m.table[key]; !contains {
 		m.ordering.Append(key)
@@ -56,6 +59,7 @@ func (m *Map) Get(key interface{}) (value interface{}, found bool) {
 
 // Remove removes the element from the map by key.
 // Key should adhere to the comparator's type assertion, otherwise method panics.
+// Remove 移除map中的元素，且从ordering双向链表中寻找到该key对应的节点，移除掉
 func (m *Map) Remove(key interface{}) {
 	if _, contains := m.table[key]; contains {
 		delete(m.table, key)
@@ -75,6 +79,7 @@ func (m *Map) Size() int {
 }
 
 // Keys returns all keys in-order
+// Keys 会按照加入map的顺序，来数据key的列表
 func (m *Map) Keys() []interface{} {
 	return m.ordering.Values()
 }
